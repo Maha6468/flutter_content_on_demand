@@ -11,15 +11,23 @@ class RowColumn extends StatelessWidget {
         title:Text('Row and Column'),
         centerTitle: true,
         ),
-      body:Column(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        crossAxisAlignment: CrossAxisAlignment.end,
-        children: [
-        Text('flutter app'),
-        Text('ios android'),
-        Text('kotlin app')
-      ],
-      )
+      // body:Column(
+      //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      //   crossAxisAlignment: CrossAxisAlignment.end,
+      //   children: [
+      //   Text('flutter app'),
+      //   Text('ios android'),
+      //   Text('kotlin app')
+      // ],
+      // )
+      body: Row(
+          children: [
+         Text('flutter app'),
+         Text('ios android'),
+         Text('kotlin app')
+         ],
+
+      ),
     );
   }
 }
