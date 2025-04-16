@@ -33,14 +33,14 @@ class RowColumn extends StatelessWidget {
            Padding(
              padding: const EdgeInsets.all(10.0),
              child: Container(
-               color: Colors.lightGreen,
+              // color: Colors.lightGreen,
                margin: EdgeInsets.symmetric(horizontal: 10.0,vertical: 10.0),
 
                child: Row(
                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                  children: [
                    Column(
-                     children: [
+                     children:[
                        Icon(Icons.call,size: 35.0,color: Colors.green,),
                        SizedBox(height: 10,),
                        Text('Call',style: TextStyle(fontSize: 22),),
