@@ -12,7 +12,7 @@ class Bangladesh extends StatelessWidget {
         centerTitle: true,
       ),
       body:Padding(
-        padding: const EdgeInsets.all(8.1),
+        padding:EdgeInsets.all(10.1),
 
 
       child:Container(
