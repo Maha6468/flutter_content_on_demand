@@ -39,6 +39,13 @@ class MyApp extends StatelessWidget{
               ]
 
           ),
+          body:Center(
+            child: Text('Hello Body',
+                style:TextStyle(
+                    fontSize: 50,
+                    fontWeight:FontWeight.bold )
+            ),
+          ),
         )
     );
   }
