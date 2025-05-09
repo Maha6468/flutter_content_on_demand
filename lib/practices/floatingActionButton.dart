@@ -13,13 +13,31 @@ class FAB extends StatelessWidget {
         backgroundColor: Colors.yellowAccent,
         centerTitle: true,
       ),
-      body: Center(
-        child: Text('Press the button'),
-      ),
-      floatingActionButton:FloatingActionButton(onPressed:(){
-        print('maha');
-      },
-      child: Icon(Icons.add),),
+       body: // Column(
+      //   children: [
+      //     InkWell(
+      //       onTap: (){
+      //         print('inkwell button');
+      //       },
+      //     ),
+      //  ],
+      // ),
+       SingleChildScrollView(
+         child: Center(
+           child: Container(
+             color: Colors.green,
+             height:50,
+             width: 100,
+             child: Column(
+                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                 children: [
+                 InkWell(
+                 onTap:(){
+                    print('one tap Inkwell');
+                    },child: Text('saim'),
+                    ),]),
+           ),
+         ))
     );
   }
 }
