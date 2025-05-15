@@ -56,6 +56,7 @@ class _TextFromFieldState extends State<TextFromField> {
                       SnackBar(content: Text('Processiong Data'),));
                 }
                 Navigator.push(context,MaterialPageRoute(builder: (context)=>M8_Class_1()));  //M8_Class_1  other page
+                //Navigator.pop(context,MaterialPageRoute(builder: (context)=>M8_Class_1()));   // page back korbe
               }, child:Text('Submit'))
             ],
           ),
