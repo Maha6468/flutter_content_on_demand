@@ -24,26 +24,29 @@ class _TextFromFieldState extends State<TextFromField> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              TextFormField(
+              Padding(
+                padding: const EdgeInsets.only(left: 30,right: 30),
+                child: TextFormField(
 
-                validator: (value){
-                  if (value == null || value.isEmpty){
-                    return 'Name can not be empty';
-                  }
-                  else if(value.contains('@') || value.contains(']') || value.contains('[') ){
-                    return 'Enter a valid Name';
-                  }
-                  else{
-                    return null;
-                  }
-                },
-                controller: _nameController,
-                decoration: InputDecoration(
-                  labelText: 'Enter your name',
-                  hintText: 'Name',
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(20)
-                  )
+                  validator: (value){
+                    if (value == null || value.isEmpty){
+                      return 'Name can not be empty';
+                    }
+                    else if(value.contains('@') || value.contains(']') || value.contains('[') ){
+                      return 'Enter a valid Name';
+                    }
+                    else{
+                      return null;
+                    }
+                  },
+                  controller: _nameController,
+                  decoration: InputDecoration(
+                    labelText: 'Enter your name',
+                    hintText: 'Name',
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(20)
+                    )
+                  ),
                 ),
               ),
               SizedBox(height: 5,),
