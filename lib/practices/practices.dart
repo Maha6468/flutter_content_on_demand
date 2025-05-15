@@ -1,58 +1,130 @@
 import 'package:flutter/material.dart';
 
-class Textfield_P_1 extends StatefulWidget {
-  const Textfield_P_1({super.key});
+class TextFromField extends StatefulWidget {
+  const TextFromField({super.key});
 
   @override
-  State<Textfield_P_1> createState() => _Textfield_P_1State();
+  State<TextFromField> createState() => _TextFromFieldState();
 }
 
-class _Textfield_P_1State extends State<Textfield_P_1> {
+class _TextFromFieldState extends State<TextFromField> {
+  TextEditingController password=TextEditingController();
   @override
   Widget build(BuildContext context) {
-    TextEditingController PhoneControl=TextEditingController();
+    TextEditingController name=TextEditingController();
     return Scaffold(
       appBar: AppBar(
-        title: Text('TextField',style: TextStyle(color: Colors.black,fontWeight:FontWeight.bold ),),
+        title: Text('TextFromField1'),
         centerTitle: true,
-        backgroundColor: Colors.cyanAccent,
       ),
-      body:Column(
-        children: [
-          Padding(
-            padding: const EdgeInsets.only(left: 30,right: 30,top: 20,bottom: 10),
-            child: TextField(
-              controller: PhoneControl,
-              decoration: InputDecoration(
+      body: Center(
+        child: Container(
+          width: 300,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              TextField(
+                controller: name,
+                decoration: InputDecoration(
+                  focusedBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(20),
+                      borderSide:BorderSide(color: Colors.orange,
+                      width: 3),
+                  ),
                   hintText: 'Enter',
-                  labelText: 'Phone',
-                  fillColor: Colors.purple,
-                  suffixIcon:Icon(Icons.account_balance),
-                  prefixIcon: Icon(Icons.ad_units_rounded),
-                  labelStyle:TextStyle(fontWeight: FontWeight.bold,),
-                  border: OutlineInputBorder()
+                  labelText: 'Username',
+                  border:OutlineInputBorder(
+                    borderRadius:BorderRadius.circular(20)
+                  ),
+                  enabledBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(20),
+                    borderSide: BorderSide(color: Colors.cyan)
+                  )
+                ),
               ),
-            ),
+              SizedBox(height: 4,),
+              TextField(
+                controller:password,
+                obscureText: true,
+                decoration:InputDecoration(
+                  hintText:'Password',
+                  suffixIcon: Icon(Icons.remove_red_eye,color: Colors.cyan,),
+                  focusedBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(20),
+                    borderSide: BorderSide(color: Colors.pink,
+                    width: 5)
+                  ),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(20)
+                  ),
+                  enabledBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(20),
+                    borderSide: BorderSide(color: Colors.cyan,
+                    width: 6),
+
+                  )
+                ),
+              ),
+              SizedBox(height: 4,),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  ElevatedButton(onPressed: (){
+                    if(name.text.isEmpty && password.text.isEmpty){
+                      print('please enter your name and password');
+                    }
+                    else if(name.text.isEmpty){
+                      print('please enter your name');
+                    }
+                    else if(password.text.isEmpty){
+                      print('please enter your password');
+                    }
+                    else if(password.text.length<6||password.text.length>6){
+                      print('password must be 6 digit');
+                    }
+                    else{
+                      print('your name and password is ${name.text} ${password.text}');
+                    }
+                  }, child: Text('Login')
+                  ),
+                  SizedBox(width: 4,),
+                  ElevatedButton(onPressed: (){
+                    name.clear();
+                    password.clear();
+                  }, child:Text('Clear'),
+
+                  )
+                ],
+              ),
+
+              // ElevatedButton(onPressed: (){
+              //   if(name.text.isEmpty && password.text.isEmpty){
+              //     print('please enter your name and password');
+              //   }
+              //   else if(name.text.isEmpty){
+              //     print('please enter your name');
+              //   }
+              //   else if(password.text.isEmpty){
+              //     print('please enter your password');
+              //   }
+              //   else if(password.text.length<6||password.text.length>6){
+              //     print('password must be 6 digit');
+              //   }
+              //   else{
+              //     print('your name and password is ${name.text} ${password.text}');
+              //   }
+              // }, child: Text('Login')
+              // ),
+              // SizedBox(height: 4,),
+              // ElevatedButton(onPressed: (){
+              //   name.clear();
+              //   password.clear();
+              // }, child:Text('Clear'),
+              //
+              // )
+            ],
           ),
-          ElevatedButton(onPressed: (){
-            if(PhoneControl.text.isEmpty){
-              print('please enter number');
-            }
-            else if(PhoneControl.text.length>11){
-              print('over 11 digit');
-            }
-            else if(PhoneControl.text.length<11){
-              print("please enter 11 digit number");
-            }
-            else{
-              print(PhoneControl.text);
-            }
-          }, child: Text('Submit')),
-          SizedBox(height: 4,),
-          ElevatedButton(onPressed: (){
-            PhoneControl.clear();
-          }, child:Text('Clear'))
-        ],
+        ),
       ),
     );
   }
