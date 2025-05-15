@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_content_on_demand/practices/otherPageGo.dart';
 
 class TextFromField extends StatefulWidget {
   const TextFromField({super.key});
@@ -47,10 +48,11 @@ class _TextFromFieldState extends State<TextFromField> {
               ),
               SizedBox(height: 5,),
               ElevatedButton(onPressed: (){
-                if(_formKey.currentState!.validate()){
+                if(_formKey.currentState!.validate()) {
                   ScaffoldMessenger.of(context).showSnackBar(
                       SnackBar(content: Text('Processiong Data'),));
                 }
+                Navigator.push(context,MaterialPageRoute(builder: (context)=>M8_Class_1()));  //M8_Class_1  other page
               }, child:Text('Submit'))
             ],
           ),
