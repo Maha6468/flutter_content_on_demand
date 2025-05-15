@@ -24,13 +24,13 @@ class _Textfield_P_1State extends State<Textfield_P_1> {
             child: TextField(
               controller: PhoneControl,
               decoration: InputDecoration(
-                hintText: 'Enter',
-                labelText: 'Phone',
-                fillColor: Colors.purple,
-                suffixIcon:Icon(Icons.account_balance),
-                prefixIcon: Icon(Icons.ad_units_rounded),
-                labelStyle:TextStyle(fontWeight: FontWeight.bold,),
-                border: OutlineInputBorder()
+                  hintText: 'Enter',
+                  labelText: 'Phone',
+                  fillColor: Colors.purple,
+                  suffixIcon:Icon(Icons.account_balance),
+                  prefixIcon: Icon(Icons.ad_units_rounded),
+                  labelStyle:TextStyle(fontWeight: FontWeight.bold,),
+                  border: OutlineInputBorder()
               ),
             ),
           ),
