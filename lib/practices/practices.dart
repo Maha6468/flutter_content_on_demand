@@ -447,7 +447,7 @@ class _GridVeiw_EState extends State<GridVeiw_E> {
                     ],
                   ),
                   SizedBox(height: 8,),
-                  Text('Full Stack Web Development with JavaScript (MERN)',style: TextStyle(fontWeight:FontWeight.bold),),
+                  Text('Full Stack Web Development With JavaScript (MERN)',style: TextStyle(fontWeight:FontWeight.bold),),
                   SizedBox(height: 8,),
                   SizedBox(
                       height: 35,width: 150,
