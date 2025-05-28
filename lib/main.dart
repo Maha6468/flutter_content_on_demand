@@ -1,5 +1,7 @@
+
 import 'package:flutter/material.dart';
-import 'package:flutter_content_on_demand/practices/floatingActionButton.dart';
+import 'package:flutter_content_on_demand/practices/contactList_exam.dart';
+import 'package:flutter_content_on_demand/practices/practices.dart';
 
 void main() {
   runApp( MyApp());
@@ -16,7 +18,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.cyanAccent),
         useMaterial3: false,
       ),
-      home:FAB()
+      home:ExamA(),
     );
   }
 }

@@ -68,8 +68,8 @@ class _ExamAState extends State<ExamA> {
                     'name':nameController.text,
                     'phone':phoneController.text,
                   });
-                  print("Name:${nameController.text}");
-                  print('Phone:${phoneController.text}');
+                  //print("Name:${nameController.text}");
+                 // print('Phone:${phoneController.text}');
                 });
               }
             },child:Text('Add')),
