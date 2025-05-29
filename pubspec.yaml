@@ -59,8 +59,15 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - images/ma.jpg
-    - images/google.jpg
+    - images/f1/america.jpg
+    - images/f1/bangladesh.jpg
+    - images/f1/brazil.jpg
+    - images/f1/general.jpg
+    - images/f1/germany.jpg
+    - images/f1/greece.jpg
+    - images/f1/sri-lanka.jpg
+    - images/f1/texas.jpg
+    - images/f1/thailand.jpg
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
